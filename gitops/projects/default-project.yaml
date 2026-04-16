@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: default-project
+  namespace: argocd
+spec:
+  description: Default project for GitOps-managed resources
+
+  sourceRepos:
+    - https://github.com/arkapratimsarkar/sunflowerlab-devops-assignment.git
+
+  destinations:
+    - namespace: '*'
+      server: https://kubernetes.default.svc
+
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
