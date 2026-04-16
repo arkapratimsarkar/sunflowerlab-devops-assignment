@@ -10,7 +10,6 @@ spec:
     repoURL: https://github.com/arkapratimsarkar/sunflowerlab-devops-assignment.git
     targetRevision: HEAD
     path: gitops
-
     directory:
       recurse: true
 
